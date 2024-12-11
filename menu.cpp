@@ -62,7 +62,7 @@ int main() {
 
     do {
         clear();
-        mvprintw(0, 0, "Aplikasi Tampilan Menu\n1. Menu Pertama\n2. Menu Kedua\n3. Menu Ketiga\n4. Sorting Array\n5. Exit");
+        mvprintw(0, 0, "Aplikasi Bubble sorting\n1. Menu Pertama\n2. Menu Kedua\n3. Menu Ketiga\n4. Sorting Array\n5. Exit");
         mvprintw(7, 0, "Masukkan angka: "); 
         refresh();
         
