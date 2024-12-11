@@ -2,13 +2,25 @@
 #include <iostream>
 using namespace std;
 
+// Variabel global
+int n = 0; // Jumlah elemen data
+
+// Fungsi tukar
+void tukar(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// Fungsi utama
 int main() {
+    int data[100]; // Array lokal untuk menyimpan data
+    int choice;    // Pilihan menu
+
     initscr();
     cbreak();
     noecho();
     keypad(stdscr, TRUE);
-
-    int choice;
 
     do {
         clear();
@@ -21,9 +33,11 @@ int main() {
         mvprintw(7, 0, "Masukkan angka: ");
         refresh();
 
-        choice = getch() - '0';
-    } while (choice != 5);
+        choice = getch(); // Ambil input menu
+        clear();
+    } while (choice != '5'); // Ulangi sampai pilihan exit dipilih
 
-    endwin();
-    return 0;
+    endwin(); // Menutup ncurses
+
+    return 0; 
 }
